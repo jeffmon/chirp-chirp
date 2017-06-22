@@ -1,12 +1,12 @@
 function chirp(n){
   // FIX ME
 
-  if(n === 0){
-    return;
+  if(n === 1){
+    return "chirp";
   }
-  console.log("chirp");
 
-  chirp(--n);
+  return "chirp " + chirp(--n);
+
 
 
 }

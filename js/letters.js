@@ -19,12 +19,12 @@ function countLetters(counter, text){
   if(text.length === 0){
     return counter;
   }
+  text = text.toLowerCase();
   if(counter.hasOwnProperty([text[0]])){
     counter[text[0]]++;
     return countLetters(counter, text.slice(1, text.length));
-  } else{
-    return countLetters(counter, text.slice(1, text.length));
   }
+  return countLetters(counter, text.slice(1, text.length));
 }
 
 $(document).ready(function(){

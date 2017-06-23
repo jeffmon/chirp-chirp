@@ -13,10 +13,18 @@ var counter = {
   "q" : 0,  "r" : 0,  "s" : 0,  "t" : 0,
   "u" : 0,  "v" : 0,  "w" : 0,  "x" : 0,
   "y" : 0,  "z" : 0
-}
+};
 
-function countLetters(counter, sample_text){
-  // FIX ME
+function countLetters(counter, text){
+  if(text.length === 0){
+    return counter;
+  }
+  if(counter.hasOwnProperty([text[0]])){
+    counter[text[0]] += 1;
+    return countLetters(counter, text.slice(1, text.length));
+  } else{
+    return countLetters(counter, text.slice(1, text.length));
+  }
 }
 
 $(document).ready(function(){

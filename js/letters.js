@@ -20,7 +20,7 @@ function countLetters(counter, text){
     return counter;
   }
   if(counter.hasOwnProperty([text[0]])){
-    counter[text[0]] += 1;
+    counter[text[0]]++;
     return countLetters(counter, text.slice(1, text.length));
   } else{
     return countLetters(counter, text.slice(1, text.length));
